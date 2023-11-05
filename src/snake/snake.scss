@@ -1,0 +1,16 @@
+body{
+  background-color: #333;
+}
+
+// BEM 
+// hw1: create 4 class variations for the head ( directions)
+
+.snake__{
+  &head{
+    background-image: url(./snake-sprite.png);
+    width: 60px;
+    height: 60px;
+    background-position: -194px 0;
+  }
+}
+
