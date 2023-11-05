@@ -8,9 +8,24 @@ body{
 .snake__{
   &head{
     background-image: url(./snake-sprite.png);
-    width: 60px;
-    height: 60px;
-    background-position: -194px 0;
+    width: 62px;
+    height: 62px;
+
+    &.dir-up{
+      background-position: -194px 0;
+    }
+
+    &.dir-down {
+      background-position: -258px -66px;
+    }
+
+    &.dir-left {
+      background-position: -188px -66px;
+    }
+
+    &.dir-right{
+      background-position: -260px 0;
+    }
   }
 }
 
