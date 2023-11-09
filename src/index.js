@@ -4,11 +4,24 @@ import reportWebVitals from './reportWebVitals';
 import { SnakeHead } from "./snake/ui";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// GROUPING !!!
+let headData = {
+  dir:'up',
+  top: 150,
+  left: 100
+}
 root.render(
   <React.StrictMode>
-    <SnakeHead dir="down"/>
+
+    {/* PARENT CONTEXT */}
+
+    <SnakeHead {...headData} />
+
+    {/* PARENT CONTEXT */}
+
   </React.StrictMode>
-);
+)
 
 // dev & test & performance
 reportWebVitals();

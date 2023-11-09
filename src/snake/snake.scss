@@ -10,6 +10,7 @@ body{
     background-image: url(./snake-sprite.png);
     width: 62px;
     height: 62px;
+    position: absolute;
 
     &.dir-up{
       background-position: -194px 0;
