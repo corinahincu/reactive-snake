@@ -149,3 +149,58 @@
   
   Permite sa scriem logica mai curat, atunci cand separam componenta ui de data.
   Metoda aceasta e similara cu hook-urile, la fel separa componenta vizuala de containerul care se ocupa de state management(amenajarea starii)
+
+
+
+
+
+
+
+### SnakeHead part 3
+
+SnakeHead 
+
+  + direction (specific)
+
+  + coordinate (common)
+  + background (common)
+
+
+  Component 
+        \
+        + -- class
+        + -- background
+
+
+-----------------------------------------------
+
+                              {name}
+                               |
+                               v
+                    <Component.. />
+                      |
+                      |
+                      v
+   withCoordinate(Component)
+                      |
+                      |    + -- {top,left,name}
+                      |    |
+                      v    v
+                    <div ...>
+                      <Component .. />
+                    </div>
+
+
+
+---------------------------------------------
+Functional component:
+
+const FunctionalComponent () => {
+  return () <---- JSX like syntax
+}
+
+Ordinary function
+
+const ordinaryFunction () => {
+  return .. < --- anything else 
+}

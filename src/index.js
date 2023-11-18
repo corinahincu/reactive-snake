@@ -1,27 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { SnakeHead } from "./snake/ui";
+import { SnakeHead, SnakeTail } from "./snake/ui";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-// GROUPING !!!
-let headData = {
-  dir:'up',
-  top: 150,
-  left: 100
-}
+/*   console.log(Object.getPrototypeOf(Component))
+  console.log(Object.getPrototypeOf(withCoordinate)); */
 root.render(
   <React.StrictMode>
-
     {/* PARENT CONTEXT */}
 
-    <SnakeHead {...headData} />
+    <SnakeHead top={100} left={200} name="head" />
+    <SnakeTail top={200} left={200} name="tail" />
 
     {/* PARENT CONTEXT */}
-
   </React.StrictMode>
-)
+);
 
 // dev & test & performance
 reportWebVitals();
