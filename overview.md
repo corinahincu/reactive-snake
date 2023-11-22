@@ -204,3 +204,38 @@ Ordinary function
 const ordinaryFunction () => {
   return .. < --- anything else 
 }
+
+
+### Part 4
+-----------------------------------------------
+
+                              {name}
+                               |
+                               v
+                    <Component.. />
+                      |
+                      |
+                      |
+                      v
+withDirection (Component)                      
+                      |
+                      |    
+                      v
+withCoordinates(Component)
+                      |
+                      |
+                      v
+                  ready to use
+
+
+
+
+---------------------------------------------------
+
+<Snake />
+  |
+  + --- <Component />
+           |
+           + -- <SnakeHead />
+           |
+           + -- <SnakeTail />
