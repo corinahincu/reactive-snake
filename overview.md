@@ -254,3 +254,69 @@ const snake = {
            + -- <SnakeHead />
            |
            + -- <SnakeTail />
+
+
+
+
+## snake component
+
+
+
+const Snake = ({data:{children}}) {
+      |
+      |
+    return (
+      |
+  <Component name="snake">
+    { 
+      |
+      |
+      + -- children.map((childData,idx))
+               |
+               |
+               + --- {
+                    return (
+                      |
+                      |
+                      \
+                        + -------  (childData.name === head 
+                      |             &&
+                      |            (
+                      |             <SnakeHead-- +
+                      |                          |
+                      |                          + -- key={`k-${idx}`}
+                      |                          + -- {...childData}
+                      |              />
+                      |             ))
+                      |
+                      |
+                      \
+                        + -------  (childData.name === body
+                                    &&
+                      |            (
+                      |             <SnakeBody-- +
+                      |                          |
+                      |                          + -- key={`k-${idx}`}
+                      |                          + -- {...childData}
+                      |              />
+                      |            ))
+                      |
+                      |
+                      |
+                      \
+                       + -------  (childData.name === tail
+                                    &&
+                                  (
+                                  <SnakeTail-- +
+                                               |
+                                               + -- key={`k-${idx}`}
+                                               + -- {...childData}
+                                   />
+                                   ))
+                )
+               }
+    }
+  </Component>   
+      )
+}
+    
