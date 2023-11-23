@@ -1,0 +1,57 @@
+@import '../snake/utils';
+
+.snake {
+
+  @include component (
+    "head",
+    (62px 62px),
+    "./snake-sprite.png",
+    (
+      "up":(-194px 0),
+      "right": (-260px 0),
+      "down": (-258px -66px),
+      "left": (-188px -66px),
+    )
+  );
+
+  @include component (
+      "tail",
+      (62px 62px),
+      "./snake-sprite.png",
+      (
+        "up":(-194px -125px),
+        "right": (-260px -125px),
+        "down": (-258px -190px),
+        "left": (-188px -190px), 
+      )
+    );
+}
+
+// BEM 
+// hw1: create 4 class variations for the head ( directions)
+
+/* .snake__{
+  &head{
+    background-image: url(./snake-sprite.png);
+    width: 62px;
+    height: 62px;
+    position: absolute;
+
+    &.dir-up{
+      background-position: -194px 0;
+    }
+
+    &.dir-down {
+      background-position: -258px -66px;
+    }
+
+    &.dir-left {
+      background-position: -188px -66px;
+    }
+
+    &.dir-right{
+      background-position: -260px 0;
+    }
+  }
+} */
+

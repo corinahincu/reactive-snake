@@ -232,7 +232,22 @@ withCoordinates(Component)
 
 ---------------------------------------------------
 
-<Snake />
+
+---------------------Data------------------------
+
+const snake = {
+  dummy: "something",
+  children: [
+    { name: "head", dir:"up",coord:{top:100, left:100} },
+    { name: "tail", dir:"up",coord:{top:100, left:100} },
+  ],
+}
+      |
+      |
+      |
+      v
+------------------UI-----------------------------
+<Snake  props     />
   |
   + --- <Component />
            |
