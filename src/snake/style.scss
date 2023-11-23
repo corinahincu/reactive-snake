@@ -15,6 +15,21 @@
   );
 
   @include component (
+      "body",
+      (62px 62px),
+      "./snake-sprite.png",
+        (
+        "up": (-130px -66px),
+        "right": (-62px 0),
+        "down": (-130px -66px),
+        "left": (-62px 0),
+        "downRight": (-2px,-6px),
+        "upRight": (-2px,-66px),
+        "upLeft": (-130px,-130px),
+        "downLeft": (-130px, -6px),
+      ));
+
+  @include component (
       "tail",
       (62px 62px),
       "./snake-sprite.png",
@@ -27,31 +42,4 @@
     );
 }
 
-// BEM 
-// hw1: create 4 class variations for the head ( directions)
-
-/* .snake__{
-  &head{
-    background-image: url(./snake-sprite.png);
-    width: 62px;
-    height: 62px;
-    position: absolute;
-
-    &.dir-up{
-      background-position: -194px 0;
-    }
-
-    &.dir-down {
-      background-position: -258px -66px;
-    }
-
-    &.dir-left {
-      background-position: -188px -66px;
-    }
-
-    &.dir-right{
-      background-position: -260px 0;
-    }
-  }
-} */
 

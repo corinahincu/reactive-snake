@@ -39,8 +39,12 @@ const withDirection = (Component) => {
 
 
 
-// SNAKE PARTS
+// SNAKE PARTS:
+// HEAD:
 const SnakeHead = withCoordinate(withDirection(Component));
+// BODY:
+const SnakeBody = withCoordinate(withDirection(Component));
+// TAIL
 const SnakeTail = withCoordinate(withDirection(Component));
 
 const Snake = ({data: {children}}) => {
@@ -53,7 +57,12 @@ const Snake = ({data: {children}}) => {
             (childData.name === "head" && (
               <SnakeHead key={`k-${idx}`} {...childData} />
             )) ||
-            (childData.name === "tail" && <SnakeTail key={`k-${idx}`} {...childData} />)
+            (childData.name === "body" && (
+              <SnakeBody key={`k-${idx}`} {...childData} />
+            )) ||
+            (childData.name === "tail" && (
+              <SnakeTail key={`k-${idx}`} {...childData} />
+            ))
           );
           
         })
